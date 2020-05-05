@@ -6,16 +6,24 @@
     <title>Fitness App</title>
   </head>
   <body>
-    <div>
-      <select name="" id="workout1">
-        <option value="">lunges</option>
-        <option value="">squats</option>
-      </select>
-      <select name="" id="workout2"></select>
-      <select name="" id="workout3"></select>
-      <button id="createWorkoutRoutine">Create Workout Routine</button>
-      <div id="workoutRoutine"></div>
-    </div>
+    <body>
+      <div class="container">
+          <h1>Training Session</h1>
+          <div id="new-workout-container">
+              <form id="new-workout-form">
+                  <input type="text" name="workout-name" id="new-workout-name">
+                  <input type="submit" value="Save Workout" />
+              </form>
+          </div>
+          <div id="workouts-content">
+              <ul id="workouts-container">
+                  <ul name="exercise-name"
+              </ul>
+              <div id="workout-show">
+              </div>
+              
+          </div>
+      </div>
 
     <script src="src/appContainer.js"></script>
     <script src="src/workout.js"></script>

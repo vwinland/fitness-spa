@@ -22,4 +22,10 @@ class AppContainer {
     //populate the activities and categories properties with the returned data	    //populate the activities and categories properties with the returned data
     //call renderWorkouts
   }
+
+  render() {
+    this.workoutsContaier.innerHTML = this.workouts
+      .map((workout) => workout.renderli())
+      .join("");
+  }
 }
