@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <link rel="stylesheet" type="text/css" href="style.css" />
   <head>
     <meta charset="utf-8" />
     <title>Fitness App</title>
   </head>
   <body>
+    <div class="container">
+      <h1>Fitness App</h1>
+
+      <div id="new-workout-container">
+        <form id="new-workout-form">
+          <input type="text" name="workout-name" id="new-workout-name" />
+          <input type="submit" value="Save Workout" />
+        </form>
+      </div>
+      <div id="workouts-content">
+        <ul id="workouts-container">
+          <ul name="exercise-name"
+        </ul>
+        <div id="workout-show"></div>
+      </div>
+    </div>
     <script src="src/AppContainer.js"></script>
     <script src="src/index.js"></script>
   </body>
