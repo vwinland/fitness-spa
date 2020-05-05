@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Exercise.destroy_all 
+Workout.destroy_all
+
 exercise1 = Exercise.create(name: "lunges")
 exercise2 = Exercise.create(name: "squats")
 exercise3 = Exercise.create(name: "pushups")
