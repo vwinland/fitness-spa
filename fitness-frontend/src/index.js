@@ -1,4 +1,3 @@
-const app = new AppContainer();
+const app = new App();
 
-app.getWorkouts();
-app.initBindingsAndEventListeners();
+//kicks off the application
