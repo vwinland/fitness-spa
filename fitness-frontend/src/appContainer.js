@@ -6,6 +6,11 @@ class AppContainer {
 
   bindEventListeners() {
     const btn = document.getElementById("createWorkoutRoutine");
+    btn.addEventListener("click", this.getExercises);
+  }
+
+  getExercises() {
+    console.log("getting workouts");
   }
 
   getWorkouts() {
