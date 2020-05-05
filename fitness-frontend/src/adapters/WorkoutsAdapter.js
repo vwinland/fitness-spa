@@ -1,6 +1,6 @@
 class WorkoutsAdapter {
   constructor() {
-    this.baseUrl = "http://localhost:3000";
+    this.baseUrl = "http://localhost:3000/";
   }
 
   getWorkouts() {
@@ -8,8 +8,8 @@ class WorkoutsAdapter {
       .then((res) => res.json())
       .catch((err) => alert(err));
   }
-}
-createWorkout(value) {
+
+  createWorkout(value) {
     const workout = {
       name: value,
     };
@@ -22,6 +22,7 @@ createWorkout(value) {
       body: JSON.stringify({ workout }),
     }).then((res) => res.json());
   }
+
   updateWorkout(value, id) {
     const workout = {
       name: value,
@@ -34,6 +35,5 @@ createWorkout(value) {
       },
       body: JSON.stringify({ workout }),
     }).then((res) => res.json());
-
-  
   }
+}
