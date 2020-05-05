@@ -22,6 +22,18 @@ createWorkout(value) {
       body: JSON.stringify({ workout }),
     }).then((res) => res.json());
   }
+  updateWorkout(value, id) {
+    const workout = {
+      name: value,
+    };
+
+    return fetch(`${this.baseUrl}/${id}`, {
+      method: "PATCH",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({ workout }),
+    }).then((res) => res.json());
 
   
   }
