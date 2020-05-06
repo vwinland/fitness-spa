@@ -6,25 +6,44 @@
     <title>Fitness App</title>
   </head>
   <body>
-    <body>
-      <div class="container">
-          <h1>Training Session</h1>
-          <div id="new-workout-container">
-              <form id="new-workout-form">
-                  <input type="text" name="workout-name" id="new-workout-name">
-                  <input type="submit" value="Save Workout" />
-              </form>
-          </div>
-          <div id="workouts-content">
-              <ul id="workouts-container">
-                  <ul name="exercise-name"
-              </ul>
-              <div id="workout-show">
-              </div>
-              
-          </div>
+    <h1>Training Session</h1>
+    <nav class="workout-nav">
+      <ul id="workouts">
+        <li class="workout-name">Workout A</li>
+        <li class="workout-name">Workout B</li>
+        <li class="workout-bane">Workout C</li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div id="new-workout-container">
+        <form id="new-workout-form">
+          <input type="text" name="workout-name" id="new-workout-name" />
+          <input type="submit" value="Save Workout" />
+        </form>
       </div>
+      <div class="form-group">
+        <label for="Exercise Name">Exercise Name</label>
+        <input
+          type="exercise-name"
+          class="form-control"
+          id="exercise-name"
+          placeholder="Enter Exercise Name"
+        />
+      </div>
+      <button type="submit" id="submit-form">Submit</button>
+    </div>
+  </body>
+  <body>
+    <div class="container">
+      <h1>Training Session</h1>
 
+      <div id="workouts-content">
+        <ul id="workouts-container">
+          <ul name="exercise-name"
+        </ul>
+        <div id="workout-show"></div>
+      </div>
+    </div>
     <script src="src/appContainer.js"></script>
     <script src="src/workout.js"></script>
     <script src="src/index.js"></script>

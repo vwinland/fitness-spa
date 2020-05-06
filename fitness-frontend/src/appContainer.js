@@ -4,13 +4,17 @@ class AppContainer {
   url = "http://localhost:3000";
   workoutRoutine = {};
 
-  bindEventListeners() {
-    const btn = document.getElementById("createWorkoutRoutine");
-    btn.addEventListener("click", this.getExercises);
-  }
-
-  getExercises() {
-    console.log("getting workouts");
+  initBindingsAndEventListeners() {
+    this.workoutsContainer = document.getElementById("workouts-container");
+    this.name = document.querySelector("body");
+    this.newWorkoutName = document.getElementById("new-workout-name");
+    this.newExerciseName = document.getElementById("add-exercise-name");
+    this.workoutForm = document.getElementById("new-workout-form");
+    this.workoutForm.addEventListener("submit", this.createWorkout.bind(this));
+    this.workoutsContainer.addEventListener(
+      "dblclick",
+      this.handleWorkoutClick.bind(this)
+    );
   }
 
   getWorkouts() {
