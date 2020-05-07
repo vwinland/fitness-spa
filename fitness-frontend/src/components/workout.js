@@ -45,73 +45,91 @@ class Workout {
     });
     this.form.style.display = "none";
   }
-}
 
-renderWorkoutAExercises(){
-  this.workoutsAdapter.getWorkouts().then(workouts => {
-    workouts[1].attributes.exercises.forEach(exercise => {
-      const workoutAExercise = new Exercise(exercise.name, exercise.id, exercise.workout_id)
-      workoutAExercise.createExerciseCard()
-    })
-  })
+  renderWorkoutAExercises() {
+    this.workoutsAdapter.getWorkouts().then((workouts) => {
+      workouts[0].attributes.exercises.forEach((exercise) => {
+        const workoutAExercise = new Exercise(
+          exercise.name,
+          exercise.id,
+          exercise.workout_id
+        );
+        workoutAExercise.createExerciseCard();
+      });
+    });
+  }
 
-  renderWorkoutBExercises(){
-    this.workoutsAdapter.getWorkouts().then(workouts => {
-      workouts[2].attributes.exercises.forEach(exercise => {
-        const workoutBExercise = new Exercise(exercise.name, exercise.id, exercise.workout_id)
-        workoutBExercise.createExerciseCard()
-      })
-    })
+  renderWorkoutBExercises() {
+    this.workoutsAdapter.getWorkouts().then((workouts) => {
+      workouts[1].attributes.exercises.forEach((exercise) => {
+        const workoutBExercise = new Exercise(
+          exercise.name,
+          exercise.id,
+          exercise.workout_id
+        );
+        workoutBExercise.createExerciseCard();
+      });
+    });
+  }
 
-    renderWorkoutCExercises(){
-      this.workoutsAdapter.getWorkouts().then(workouts => {
-        workouts[3].attributes.exercises.forEach(exercise => {
-          const workoutCExercise = new Exercise(exercise.name, exercise.id, exercise.workout_id)
-          workoutCExercise.createExerciseCard()
-        })
-      })
+  renderWorkoutCExercises() {
+    this.workoutsAdapter.getWorkouts().then((workouts) => {
+      workouts[2].attributes.exercises.forEach((exercise) => {
+        const workoutCExercise = new Exercise(
+          exercise.name,
+          exercise.id,
+          exercise.workout_id
+        );
+        workoutCExercise.createExerciseCard();
+      });
+    });
+  }
 
-      renderAllExercises(){
-        this.exercisesAdapter.getExercises().then(exercises => {
-          exercises.forEach(exercise => {
-            const exerciseObj = new Exercise(exercise.attributes.name, item.id, item.attributes.workout.id, item.attributes.workout.name)
-            exerciseObj.createExerciseCard()
-          })
-        })
-      }
+  renderAllExercises() {
+    this.exercisesAdapter.getExercises().then((exercises) => {
+      exercises.forEach((exercise) => {
+        const exerciseObj = new Exercise(
+          exercise.attributes.name,
+          item.id,
+          item.attributes.workout.id,
+          item.attributes.workout.name
+        );
+        exerciseObj.createExerciseCard();
+      });
+    });
+  }
 
-      renderAddWorkoutExerciseForm(){
-        this.form.style.display = "block"
-        this.form.style.display = "0 auto"
-        this.form.addEventListener("submit", (e) => this.addNewWorkoutExercise(e))
-      }
+  renderAddWorkoutExerciseForm() {
+    this.form.style.display = "block";
+    this.form.style.display = "0 auto";
+    this.form.addEventListener("submit", (e) => this.addNewWorkoutExercise(e));
+  }
 
-      appendWorkoutNameToForm(){
-        this.workoutsAdapter.getWorkouts().then(workouts => {
-          workouts.forEach(workout => {
-            const selectBox = document.querySelector("#workout-select")
-            const option = document.createElement("option")
-            option.textContent = workout.attributes.name
-            option.value = workout.id 
-            selectBox.append(option)
-          })
-        })
-      }
+  appendWorkoutNameToForm() {
+    this.workoutsAdapter.getWorkouts().then((workouts) => {
+      workouts.forEach((workout) => {
+        const selectBox = document.querySelector("#workout-select");
+        const option = document.createElement("option");
+        option.textContent = workout.attributes.name;
+        option.value = workout.id;
+        selectBox.append(option);
+      });
+    });
+  }
 
-      addNewWorkoutExercise(e){
-        e.preventDefault()
-        const exerciseNameSelect = document.querySelector("#workout-select").value
-        const exerciseName = document.querySelector("#exercise-name").value
-        const data = {
-          name: exerciseName,
-          workout_id: exerciseNameSelect
-        }
-        this.exercisesAdapter.postExercises(data).then(data => {
-          alert("Exercise added!")
-          this.form.reset()
-          this.clearPage()
-          this.renderAllExercises()
-        })
-      }
-
+  addNewWorkoutExercise(e) {
+    e.preventDefault();
+    const exerciseNameSelect = document.querySelector("#workout-select").value;
+    const exerciseName = document.querySelector("#exercise-name").value;
+    const data = {
+      name: exerciseName,
+      workout_id: exerciseNameSelect,
+    };
+    this.exercisesAdapter.postExercises(data).then((data) => {
+      alert("Exercise added!");
+      this.form.reset();
+      this.clearPage();
+      this.renderAllExercises();
+    });
+  }
 }
