@@ -7,8 +7,35 @@ class Workout {
     this.appendWorkoutNameToFrom();
   }
 
-  exerciseArray() {
-    Exercises.find((x) => x.id === this.exercise_id).name;
+  addEventListenerToWorkout() {
+    const workoutNames = document.querySelectorAll(".workout-name");
+    workoutNames.forEach((workout) => {
+      workout.addEventListener("click", () => {
+        const container = document.querySelector(".container");
+        container.style.display = "flex";
+        switch (workout.textContent) {
+          case "Workout A":
+            this.clearPage();
+            this.renderWorkoutAExercises();
+            break;
+          case "Workout B":
+            this.clearPage();
+            this.renderWorkoutBExercises();
+            break;
+          case "Workout C":
+            this.clearPage();
+            this.renderWorkoutCExercises();
+            break;
+          case "Add New Exercises":
+            this.clearPage();
+            this.renderAddWorkoutExerciseForm();
+            break;
+          default:
+            this.clearPage();
+            this.renderAllExercises;
+        }
+      });
+    });
   }
 
   renderLi() {
