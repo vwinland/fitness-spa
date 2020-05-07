@@ -40,7 +40,7 @@ class Workout {
 
   clearPage() {
     const clearExercises = document.querySelectorAll(".exercise-card");
-    Array.form(clearExercises).forEach((exercise) => {
+    Array.from(clearExercises).forEach((exercise) => {
       exercise.remove();
     });
     this.form.style.display = "none";
