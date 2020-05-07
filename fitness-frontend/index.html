@@ -1,49 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <link rel="stylesheet" type="text/css" href="style.css" />
-  <head>
-    <meta charset="utf-8" />
-    <title>Fitness App</title>
-  </head>
-  <body>
-    <h1>Training Session</h1>
-    <nav class="workout-nav">
-      <ul id="workouts">
-        <li class="workout-name">Workout A</li>
-        <li class="workout-name">Workout B</li>
-        <li class="workout-namee">Workout C</li>
-      </ul>
-    </nav>
-    <div class="container">
-      <div id="new-workout-container">
-        <form id="new-workout-form">
-          <input type="text" name="workout-name" id="new-workout-name" />
-          <input type="submit" value="Save Workout" />
-        </form>
-        <div id="workouts-content">
-          <ul id="workouts-container">
-          </ul>
-          <div id="workout-show"></div>
-        </div>
-      </div>
-      </div>
-      <div class="form-group">
-        <label for="Exercise Name">Exercise Name</label>
-        <input
-          type="exercise-name"
-          class="form-control"
-          id="exercise-name"
-          placeholder="Enter Exercise Name"
-        />
-      </div>
-      <button type="submit" id="submit-form">Submit</button>
-    </div>
-  </body>
-
-
-      
-  <script type="text/javascript" src="src/components/workout.js"></script>
- 
   <script type="text/javascript" src="src/components/exercise.js"></script>
   <script src="src/components/workouts.js"></script>
   <script src="src/components/exercises.js"></script>
@@ -51,5 +8,39 @@
   <script src="src/adapters/ExercisesAdapter.js"></script>
   <script src="src/adapters/WorkoutsAdapter.js"></script>
   <script src="src/index.js"></script>
+  <head>
+    <meta charset="utf-8" />
+    <title>Fitness App</title>
+  </head>
+  <body>
+    <h1>Training Session</h1>
+    <nav class="workout-nav">
+      <ul id="workout">
+        <li class="workout-name">Workout A</li>
+        <li class="workout-name">Workout B</li>
+        <li class="workout-name">Workout C</li>
+        <li class="workout-name">All Exercises</li>
+        <li class="workout-name">Add Exercises</li>
+      </ul>
+    </nav>
+    <div class="container">
+      <form id="create-workout-exercise-form">
+        <label for="workout">Workout Name</label>
+        <select class="form-control" id="workout-select">
+          <option selected="selected">All Exercises</option>
+        </select>
+
+        <div class="form-group">
+          <label for="Exercise Name">Exercise Name</label>
+          <input
+            type="exercise-name"
+            class="form-control"
+            id="exercise-name"
+            placeholder="Enter Exercise name"
+          />
+        </div>
+        <button type="submit" id="submit-form">Submit</button>
+      </form>
+    </div>
   </body>
 </html>
