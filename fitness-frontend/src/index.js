@@ -1,4 +1,4 @@
 const app = new App();
-app.run;
+app.run();
 
 //kicks off the application
