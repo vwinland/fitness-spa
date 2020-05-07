@@ -1,6 +1,7 @@
 class App {
-  constructor() {
-    this.workout = new Workout();
-    //this.exercises = new Exercises();
+  run() {
+    const workout = new Workout();
+    workout.renderAllExercises();
+    workout.addEventListenerToWorkout;
   }
 }
