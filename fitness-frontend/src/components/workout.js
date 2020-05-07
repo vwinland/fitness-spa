@@ -32,7 +32,7 @@ class Workout {
             break;
           default:
             this.clearPage();
-            this.renderAllExercises;
+            this.renderAllExercises();
         }
       });
     });
@@ -101,7 +101,7 @@ class Workout {
 
   renderAddWorkoutExerciseForm() {
     this.form.style.display = "block";
-    this.form.style.display = "0 auto";
+    this.form.style.margin = "0 auto";
     this.form.addEventListener("submit", (e) => this.addNewWorkoutExercise(e));
   }
 

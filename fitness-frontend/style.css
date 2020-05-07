@@ -58,6 +58,11 @@ ul#workout {
   padding: 20px;
 }
 
+.name {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .exercise-card {
   width: 300px;
   border-radius: 10px;
