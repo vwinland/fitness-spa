@@ -38,7 +38,11 @@ class Workout {
     });
   }
 
-  renderLi() {
-    return `<li data-id=${this.id}>${this.name} ${this.exercise_id}`;
+  clearPage() {
+    const clearExercises = document.querySelectorAll(".exercise-card");
+    Array.form(clearExercises).forEach((exercise) => {
+      exercise.remove();
+    });
+    this.form.style.display = "none";
   }
 }
