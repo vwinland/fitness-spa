@@ -1,7 +1,7 @@
 class WorkoutsController < ApplicationController
 
     def index 
-        render :json => Workout.all, :include => :exercise
+        render :json => Workout.all
     end
 
     
