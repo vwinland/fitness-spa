@@ -90,9 +90,9 @@ class Workout {
       exercises.forEach((exercise) => {
         const exerciseObj = new Exercise(
           exercise.attributes.name,
-          item.id,
-          item.attributes.workout.id,
-          item.attributes.workout.name
+          exercises.id,
+          exercises.attributes.workout.id,
+          exercises.attributes.workout.name
         );
         exerciseObj.createExerciseCard();
       });

@@ -9,7 +9,7 @@ class Exercise {
 
   createExerciseCard() {
     const container = document.querySelector(".container");
-    const exerciseCard = docuemtn.createElement("div");
+    const exerciseCard = document.createElement("div");
     exerciseCard.className = "exercise-card";
     exerciseCard.setAttribute("data-id", `${this.id}`);
     exerciseCard.setAttribute("data-workout-id", `${this.workout_id}`);
@@ -19,7 +19,7 @@ class Exercise {
     const deleteBtn = document.createElement("button");
     deleteBtn.className = "delete-exercise";
     deleteBtn.textContent = "Delete Workout";
-    deleteBtn.addEventListener("click", (e) => this.deleteItem(e));
+    deleteBtn.addEventListener("click", (e) => this.deleteExercise(e));
     container.append(exerciseCard);
   }
 
