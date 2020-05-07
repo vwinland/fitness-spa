@@ -1,7 +1,8 @@
 class Workout {
-  constructor(workoutJSON) {
-    this.name = workoutJSON.name;
-    this.id = workoutJSON.id;
+  constructor(name) {
+    this.name = name;
+    this.workoutsAdapter = new WorkoutsAdapter();
+    this.exercisesAdapter = new ExercisesAdapter();
     this.exercise_id = workoutJSON.exercise_id;
   }
 
