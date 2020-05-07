@@ -1,4 +1,4 @@
-class Workouts {
+class Workout {
   constructor(name) {
     this.name = name;
   }
