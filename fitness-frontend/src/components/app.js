@@ -1,6 +1,6 @@
 class App {
   constructor() {
-    this.workouts = new Workouts();
+    this.workout = new Workout();
     //this.exercises = new Exercises();
   }
 }

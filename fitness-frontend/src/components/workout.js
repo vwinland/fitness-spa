@@ -46,3 +46,28 @@ class Workout {
     this.form.style.display = "none";
   }
 }
+
+renderWorkoutAExercises(){
+  this.workoutsAdapter.getWorkouts().then(workouts => {
+    workouts[1].attributes.exercises.forEach(exercise => {
+      const workoutAExercise = new Exercise(exercise.name, exercise.id, exercise.workout_id)
+      workoutAExercise.createExerciseCard()
+    })
+  })
+
+  renderWorkoutBExercises(){
+    this.workoutsAdapter.getWorkouts().then(workouts => {
+      workouts[2].attributes.exercises.forEach(exercise => {
+        const workoutBExercise = new Exercise(exercise.name, exercise.id, exercise.workout_id)
+        workoutBExercise.createExerciseCard()
+      })
+    })
+
+    renderWorkoutCExercises(){
+      this.workoutsAdapter.getWorkouts().then(workouts => {
+        workouts[3].attributes.exercises.forEach(exercise => {
+          const workoutCExercise = new Exercise(exercise.name, exercise.id, exercise.workout_id)
+          workoutCExercise.createExerciseCard()
+        })
+      })
+}
