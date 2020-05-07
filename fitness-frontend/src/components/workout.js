@@ -70,4 +70,13 @@ renderWorkoutAExercises(){
           workoutCExercise.createExerciseCard()
         })
       })
+
+      renderAllExercises(){
+        this.exercisesAdapter.getExercises().then(exercises => {
+          exercises.forEach(exercise => {
+            const exerciseObj = new Exercise(exercise.attributes.name, item.id, item.attributes.workout.id, item.attributes.workout.name)
+            exerciseObj.createExerciseCard()
+          })
+        })
+      }
 }
