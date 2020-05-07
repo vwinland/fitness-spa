@@ -49,6 +49,7 @@ ul#workout {
 }
 
 .workout-nav {
+  display: flex;
   border: 3px solid rgb(5, 41, 158);
 }
 
