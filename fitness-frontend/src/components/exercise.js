@@ -22,4 +22,11 @@ class Exercise {
     deleteBtn.addEventListener("click", (e) => this.deleteItem(e));
     container.append(exerciseCard);
   }
+
+  deleteExercise(e) {
+    const id = e.target.paranetElement.dataset.id;
+    this.exercisesAdapter
+      .deleteExercise(id)
+      .then(() => e.target.paranetElement.remove());
+  }
 }
