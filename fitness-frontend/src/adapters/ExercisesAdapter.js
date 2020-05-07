@@ -8,4 +8,14 @@ class ExercisesAdapter {
       .then((resp) => resp.json())
       .then((json) => json.data);
   }
+
+  postExercises(data) {
+    return fetch(this.baseUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then((resp) => resp.json());
+  }
 }
