@@ -39,7 +39,7 @@ input {
   margin: auto;
   margin-top: 50px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 ul#workout {
