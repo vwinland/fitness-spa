@@ -12,8 +12,9 @@ class WorkoutsController < ApplicationController
     end
 
     def create #add in validation later
-    
-        @workout = Workout.create(workout_params)
+        exercise = Exercise.find(params[:exercise].downcase)
+
+        @workout = Workout.create(name: params[:name], exercise: exercise)
         render json: @workout, status: 200
     end
 

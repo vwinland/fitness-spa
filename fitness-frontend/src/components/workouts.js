@@ -11,8 +11,9 @@ class Workouts {
     this.workoutsContainer = document.getElementById("workouts-container");
     this.name = document.querySelector("body");
     this.newWorkoutName = document.getElementById("new-workout-name");
-    this.newExerciseName = document.getElementById("add-exercise-name");
+    this.exerciseName = document.getElementById("exercise-name");
     this.workoutForm = document.getElementById("new-workout-form");
+    this.name.append(this.exerciseName);
     this.workoutForm.addEventListener("submit", this.createWorkout.bind(this));
     this.workoutsContainer.addEventListener(
       "dblclick",
