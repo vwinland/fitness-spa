@@ -3,7 +3,8 @@ class Workout {
     this.name = name;
     this.workoutsAdapter = new WorkoutsAdapter();
     this.exercisesAdapter = new ExercisesAdapter();
-    this.exercise_id = workoutJSON.exercise_id;
+    this.form = document.querySelector("#create-workout-exercise-form");
+    this.appendWorkoutNameToFrom();
   }
 
   exerciseArray() {
