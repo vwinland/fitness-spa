@@ -119,11 +119,11 @@ class Workout {
 
   addNewWorkoutExercise(e) {
     e.preventDefault();
-    const exerciseNameSelect = document.querySelector("#workout-select").value;
+    const workoutNameSelect = document.querySelector("#workout-select").value;
     const exerciseName = document.querySelector("#exercise-name").value;
     const data = {
       name: exerciseName,
-      workout_id: exerciseNameSelect,
+      workout_id: workoutNameSelect,
     };
     this.exercisesAdapter.postExercises(data).then((data) => {
       alert("Exercise added!");

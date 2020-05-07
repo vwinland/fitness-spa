@@ -20,6 +20,7 @@ class Exercise {
     deleteBtn.className = "delete-exercise";
     deleteBtn.textContent = "Delete Workout";
     deleteBtn.addEventListener("click", (e) => this.deleteExercise(e));
+    exerciseCard.append(exerciseName, deleteBtn);
     container.append(exerciseCard);
   }
 
