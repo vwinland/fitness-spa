@@ -1,7 +1,3 @@
-const app = new AppContainer();
-app.getWorkouts();
-app.bindEventListeners();
-//app.fetchAndLoadWorkouts();
-app.render();
+const app = new App();
 
 //kicks off the application
