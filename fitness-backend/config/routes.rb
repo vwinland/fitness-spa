@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   resources :exercises
-  resources :workouts, only: :index
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-end
+  #define routes
+  ##namespace :api do
+    ##namespace :v1 do
+      
+      resources :workouts, :exercises
+    
+  end
