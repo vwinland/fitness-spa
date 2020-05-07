@@ -1,5 +1,6 @@
 class Exercises {
-  constructor(name) {
-    this.name = name;
+  constructor(ExerciseJSON) {
+    this.name = ExerciseJSON.name;
+    this.id = ExerciseJSON.id;
   }
 }
