@@ -4,7 +4,7 @@ class Workout {
     this.workoutsAdapter = new WorkoutsAdapter();
     this.exercisesAdapter = new ExercisesAdapter();
     this.form = document.querySelector("#create-workout-exercise-form");
-    this.appendWorkoutNameToFrom();
+    this.appendWorkoutNameToForm();
   }
 
   addEventListenerToWorkout() {
@@ -86,8 +86,16 @@ renderWorkoutAExercises(){
         this.form.addEventListener("submit", (e) => this.addNewWorkoutExercise(e))
       }
 
-      appendWorkoutNameToFrom(){
-        
+      appendWorkoutNameToForm(){
+        this.workoutsAdapter.getWorkouts().then(workouts => {
+          workouts.forEach(workout => {
+            const selectBox = document.querySelector("#workout-select")
+            const option = document.createElement("option")
+            option.textContent = workout.attributes.name
+            option.value = workout.id 
+            selectBox.append(option)
+          })
+        })
       }
 
 }
