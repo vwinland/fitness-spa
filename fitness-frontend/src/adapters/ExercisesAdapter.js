@@ -18,4 +18,13 @@ class ExercisesAdapter {
       body: JSON.stringify(data),
     }).then((resp) => resp.json());
   }
+
+  deleteExercises(id) {
+    return fetch(`${this.baseUrl}/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then((resp) => resp.json());
+  }
 }
