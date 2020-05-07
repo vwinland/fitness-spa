@@ -1,0 +1,13 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "fitness_backend_development",
+            "dialect": "PostgreSQL",
+            "name": "postgres_db",
+            "password": "user",
+            "port": 5432,
+            "server": "localhost",
+            "username": "vanna"
+        }
+    ]
+}
