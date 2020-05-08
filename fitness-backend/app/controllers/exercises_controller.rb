@@ -20,7 +20,7 @@ class ExercisesController < ApplicationController
     def destroy 
         exercise = Exercise.find_by(id: params[:id])
         if exercise.destroy 
-            render josn: {message: "Exercise Deleted"}
+            render json: {message: "Exercise Deleted"}
         end
     end
 
