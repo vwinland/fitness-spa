@@ -26,7 +26,7 @@ class Workout {
             this.clearPage();
             this.renderWorkoutCExercises();
             break;
-          case "Add New Exercises":
+          case "Add Exercises":
             this.clearPage();
             this.renderAddWorkoutExerciseForm();
             break;

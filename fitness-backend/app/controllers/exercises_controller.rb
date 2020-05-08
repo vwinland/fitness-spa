@@ -11,7 +11,7 @@ class ExercisesController < ApplicationController
     end
 
     def create 
-        exercise = Exercise.new(id: params[:id])
+        exercise = Exercise.new(exercise_params)
         if exercise.save
             render json: ExerciseSerializer.new(exercise).serialized_json
         end

@@ -25,9 +25,9 @@ class Exercise {
   }
 
   deleteExercise(e) {
-    const id = e.target.paranetElement.dataset.id;
+    const id = e.target.parentElement.dataset.id;
     this.exercisesAdapter
-      .deleteExercise(id)
-      .then(() => e.target.paranetElement.remove());
+      .deleteExercises(id)
+      .then(() => e.target.parentElement.remove());
   }
 }
