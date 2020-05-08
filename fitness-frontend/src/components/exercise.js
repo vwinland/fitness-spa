@@ -18,7 +18,7 @@ class Exercise {
     exerciseName.textContent = this.name;
     const deleteBtn = document.createElement("button");
     deleteBtn.className = "delete-exercise";
-    deleteBtn.textContent = "Delete Workout";
+    deleteBtn.textContent = "Delete Exercise";
     deleteBtn.addEventListener("click", (e) => this.deleteExercise(e));
     exerciseCard.append(exerciseName, deleteBtn);
     container.append(exerciseCard);
