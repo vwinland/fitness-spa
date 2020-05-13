@@ -1,5 +1,5 @@
 class App {
-  run() {
+  constructor() {
     const workout = new Workout();
     workout.renderAllExercises();
     workout.addEventListenerToWorkout();

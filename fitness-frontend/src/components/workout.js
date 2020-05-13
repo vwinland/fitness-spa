@@ -126,7 +126,7 @@ class Workout {
       workout_id: workoutNameSelect,
     };
     this.exercisesAdapter.postExercises(data).then((data) => {
-      alert("Exercise added!");
+      alert("Exercise successfully added!");
       this.form.reset();
       this.clearPage();
       this.renderAllExercises();
