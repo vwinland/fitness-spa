@@ -3,5 +3,6 @@ class App {
     const workout = new Workout();
     workout.renderAllExercises();
     workout.addEventListenerToWorkout();
+    workout.sortExercises();
   }
 }

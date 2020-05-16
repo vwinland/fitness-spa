@@ -5,6 +5,10 @@ class Workout {
     this.exercisesAdapter = new ExercisesAdapter();
     this.form = document.querySelector("#create-workout-exercise-form");
     this.appendWorkoutNameToForm();
+    const sortBtn = document.getElementById("sort-exercises");
+    // sortBtn.className = "sort-exercises";
+    // sortBtn.textContent = "Sort Exercises";
+    sortBtn.addEventListener("click", (e) => this.sortExercises(e));
   }
 
   addEventListenerToWorkout() {
@@ -98,6 +102,50 @@ class Workout {
       });
     });
   }
+
+  sortExercises(e) {
+    this.clearPage();
+    const allExercises = [];
+    this.exercisesAdapter.getExercises().then((exercises) => {
+      exercises.forEach((exercise) => {
+        const exerciseObj = new Exercise(
+          exercise.attributes.name,
+          exercise.id,
+          exercise.attributes.workout.id,
+          exercise.attributes.workout.name
+        );
+        allExercises.push(exerciseObj);
+      });
+      const sortedExercises = allExercises.sort((a, b) =>
+        a.name.localeCompare(b.name)
+      );
+      sortedExercises.forEach((exercise) => exercise.createExerciseCard());
+    });
+  }
+  // this.getExercises;
+  // const sortedExercises = allExercises.sort((a, b) =>
+  //   a.name.localeCompare(b.name)
+  // );
+  // sortedExercises.forEach((exercise) => exercise.createExerciseCard());
+
+  // sortExercises() {
+  //   const allExercises = [];
+  //   this.renderAllExercises((exercises) => {
+  //     exercises.forEach((exercise) => {
+  //       const sortExercise = new ExerciseList(
+  //         exercise.attributes.name,
+  //         exercise.id,
+  //         exercises.attributes.workout.id,
+  //         exercises.attributes.name
+  //       );
+  //       allExercises.push(sortExercise);
+  //     });
+  //     const sortAllExercises = allExercises.sort((a, b) =>
+  //       a.name.localeCompare(b.name)
+  //     );
+  //     sortAllExercises.forEach((exercise) => exercise.createExerciseCard);
+  //   });
+  // }
 
   renderAddWorkoutExerciseForm() {
     this.form.style.display = "block";
