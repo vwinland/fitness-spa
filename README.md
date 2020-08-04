@@ -20,7 +20,7 @@ A single-page-application using a JavaScript frontend and a rails API to manage 
 ### Backend
 * Clone this repo to local machin git clone <this-repo>
 * cd into project directory and into project-backend and run bundle install to install dependencies
-* Make sure Postgres app is running. To install Postgres app, go here* 
+* Make sure Postgres app is running. To install Postgres app, go [here](https://www.postgresql.org/download/) 
 * Run rails db:create to create a database
 * Run rails db:migrate to create tables
 * Run rails db:seed to generate seed data
